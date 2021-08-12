@@ -42,7 +42,6 @@ const SocialAuth = () => {
   }, []);
 
   const handleOAuthLogin = async (res: any) => {
-    console.log(res);
     try {
       const response = await axiosClient().post('/auth/google', {
         idToken: res.tokenId,
