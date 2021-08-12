@@ -1,7 +1,7 @@
 import Logo from '../assets/devchallenges-light.svg';
 import { Typography, Input, Icon } from '../GlobalStyle';
 import { MdEmail, MdLock } from 'react-icons/md';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {
   Button,
   Content,
@@ -12,7 +12,7 @@ import {
 } from './styles/AuthStyle';
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { AuthFormState } from '../features/auth/interface';
-import axiosClient, { backendUrl } from '../api/axiosClient';
+import axiosClient from '../api/axiosClient';
 import axios from 'axios';
 import useSignin from '../hooks/useSignin';
 import Loading from '../components/Loading';
@@ -20,7 +20,6 @@ import SocialAuth from '../components/SocialAuth';
 
 const LoginPage = () => {
   const history = useHistory();
-  const location = useLocation();
   const { loading } = useSignin();
   const [error, setError] = useState<string | null>(null);
   const [values, setValues] = useState<AuthFormState>({
