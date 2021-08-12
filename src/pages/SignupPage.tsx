@@ -16,7 +16,7 @@ import { AuthFormState } from '../features/auth/interface';
 import axiosClient from '../api/axiosClient';
 import axios from 'axios';
 import Loading from '../components/Loading';
-import SocialAuth from '../components/SocialAuth';
+import SocialAuth from '../components/socialAuth';
 
 const SignupPage = () => {
   const { loading } = useSignin();

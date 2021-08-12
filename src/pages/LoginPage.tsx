@@ -16,7 +16,7 @@ import axiosClient from '../api/axiosClient';
 import axios from 'axios';
 import useSignin from '../hooks/useSignin';
 import Loading from '../components/Loading';
-import SocialAuth from '../components/SocialAuth';
+import SocialAuth from '../components/socialAuth';
 
 const LoginPage = () => {
   const history = useHistory();
