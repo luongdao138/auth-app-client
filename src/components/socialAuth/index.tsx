@@ -42,6 +42,7 @@ const SocialAuth = () => {
   }, []);
 
   const handleOAuthLogin = async (res: any) => {
+    console.log(res);
     try {
       const response = await axiosClient().post('/auth/google', {
         idToken: res.tokenId,
@@ -51,7 +52,6 @@ const SocialAuth = () => {
     } catch (error) {
       console.log(error);
     }
-    // console.log();
   };
 
   const handleFacebookLogin = async (res: any) => {
