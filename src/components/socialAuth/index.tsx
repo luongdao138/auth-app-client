@@ -73,6 +73,7 @@ const SocialAuth = () => {
       <GoogleLogin
         clientId='63402635672-qg2gll1l0hojkojtknn2e2r4t4dlhfgj.apps.googleusercontent.com'
         onSuccess={handleOAuthLogin}
+        onFailure={handleOAuthLogin}
         cookiePolicy='single_host_origin'
         render={({ onClick }) => {
           return (
