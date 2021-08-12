@@ -19,7 +19,7 @@ const useSignin = () => {
     };
 
     getUser();
-  }, []);
+  }, [history]);
 
   return { loading };
 };

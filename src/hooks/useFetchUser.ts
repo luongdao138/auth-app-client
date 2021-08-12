@@ -42,7 +42,7 @@ const useFetchUser = () => {
 
     if (!user._id) getUser();
     else setLoading(false);
-  }, [user._id]);
+  }, [user._id, history, dispatch]);
 
   return { loading, error };
 };
